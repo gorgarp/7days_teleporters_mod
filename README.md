@@ -1,6 +1,6 @@
 # Teleporters
 
-A 7 Days to Die (V1.2) mod that adds craftable teleporters. Place them around the world, name them, and teleport instantly between any teleporter from a GUI destination picker.
+A 7 Days to Die (V2) mod that adds craftable teleporters. Place them around the world, name them, and teleport instantly between any teleporter from a GUI destination picker.
 
 ## Features
 
