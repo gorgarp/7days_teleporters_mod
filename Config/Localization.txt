@@ -1,0 +1,13 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+teleportPad,blocks,Block,,x,Teleport Pad
+teleportPadDesc,blocks,Block,,x,A high-tech teleportation pad. Place it down and name it. Once you have two or more pads placed you can teleport between them using the built-in interface.
+teleportpad_title,blocks,Block,,x,TELEPORT
+teleportpad_configure,blocks,Block,,x,Press E to configure this Teleport Pad
+teleportpad_use,blocks,Block,,x,Press E to use {0}
+teleportpad_name_title,blocks,Block,,x,NAME PAD
+teleportpad_enter_name,blocks,Block,,x,Enter a name for this pad:
+teleportpad_save,blocks,Block,,x,SAVE
+teleportpad_name_empty,blocks,Block,,x,Pad name cannot be empty.
+teleportpad_named,blocks,Block,,x,Pad named: {0}
+teleportpad_teleported,blocks,Block,,x,Teleported to {0}
+teleportpad_no_destinations,blocks,Block,,x,No other pads found. Place more pads to teleport.

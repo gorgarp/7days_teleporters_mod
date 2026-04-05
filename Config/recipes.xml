@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+    <append xpath="/recipes">
+        <recipe name="teleportPad" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable,workbenchCrafting">
+            <ingredient name="resourceForgedIron" count="20"/>
+            <ingredient name="resourceMechanicalParts" count="4"/>
+            <ingredient name="resourceElectricParts" count="8"/>
+            <ingredient name="resourceScrapPolymers" count="5"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceForgedIron,resourceMechanicalParts,resourceElectricParts,resourceScrapPolymers"/>
+            </effect_group>
+        </recipe>
+    </append>
+</configs>

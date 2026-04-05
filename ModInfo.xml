@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+    <Name value="TeleportPads" />
+    <DisplayName value="Teleport Pads" />
+    <Version value="1.0.0" />
+    <Description value="Craftable teleportation pads with a GUI destination picker. Place pads, name them, and teleport between any networked pad." />
+    <Author value="Greg" />
+    <Website value="" />
+</xml>

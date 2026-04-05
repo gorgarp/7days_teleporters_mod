@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+    <append xpath="/blocks">
+        <block name="teleportPad">
+            <property name="CreativeMode" value="Player"/>
+            <property name="Class" value="BlockTeleportPad, TeleportPads"/>
+            <property name="Material" value="Mmetal"/>
+            <property name="MaxDamage" value="500"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/Industrial/controlPanelBase_01Prefab.prefab" param1="main_mesh"/>
+            <property name="Path" value="solid"/>
+            <property name="DisplayType" value="blockMulti"/>
+            <property name="MultiBlockDim" value="1,1,1"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="Place" value="TowardsPlacerInverted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="TintColor" value="3080FF"/>
+            <property name="Texture" value="293"/>
+            <property name="Stacknumber" value="10"/>
+            <property name="CustomIcon" value="pressureplate"/>
+            <property name="CustomIconTint" value="4090FF"/>
+            <property name="ItemTypeIcon" value="map_waypoints"/>
+            <property name="DescriptionKey" value="teleportPadDesc"/>
+            <property name="UnlockedBy" value="perkAdvancedEngineering"/>
+            <property name="EconomicValue" value="800"/>
+            <property name="SellableToTrader" value="false"/>
+            <property name="Group" value="Science,Building"/>
+            <property name="FilterTags" value="MC_building,SC_electrical"/>
+            <property name="SortOrder1" value="70r2"/>
+            <property name="SortOrder2" value="0060"/>
+            <property name="SoundPickup" value="triggerplate_grab"/>
+            <property name="SoundPlace" value="triggerplate_place"/>
+            <property name="TakeDelay" value="5"/>
+            <property name="Map.Color" value="0,160,255"/>
+            <property class="RepairItems">
+                <property name="resourceForgedIron" value="10"/>
+                <property name="resourceElectricParts" value="4"/>
+            </property>
+            <drop event="Harvest" name="resourceElectricParts" count="2" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceMechanicalParts" count="2" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceForgedIron" count="5,10" tag="allHarvest"/>
+            <drop event="Destroy" name="resourceScrapIron" count="5,15"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+        </block>
+    </append>
+</configs>

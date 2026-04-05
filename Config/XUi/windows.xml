@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+    <append xpath="/windows">
+
+        <window name="windowTeleportPadSelect" width="460" height="540"
+                controller="TeleportPadWindow, TeleportPads"
+                anchor="CenterCenter" panel="Center" cursor_area="true">
+
+            <panel name="header" pos="0,0" height="48" depth="5"
+                   backgroundspritename="ui_game_panel_header">
+                <sprite depth="6" name="windowIcon" width="32" height="32"
+                        pos="8,-8" sprite="ui_game_symbol_map_waypoints"/>
+                <label depth="6" pos="44,-8" width="320" height="32"
+                       text="{sourcename}" font_size="28"
+                       effect="outline" justify="left"
+                       style="header.name"/>
+                <label depth="6" pos="0,-8" width="440" height="32"
+                       text="TELEPORT" text_key="teleportpad_title"
+                       font_size="20" effect="outline" justify="right"
+                       color="222,206,163"/>
+            </panel>
+
+            <rect name="toolbar" pos="0,-50" height="42" depth="5">
+                <sprite depth="3" sprite="menu_empty3px"
+                        color="40,40,40,240" type="sliced" width="460" height="42"/>
+
+                <sprite depth="5" name="searchIcon" width="20" height="20"
+                        pos="10,-11" sprite="ui_game_symbol_search"/>
+
+                <panel pos="34,-6" depth="4" width="190" height="30"
+                       disableautobackground="true">
+                    <sprite depth="3" sprite="menu_empty3px" color="64,64,64"
+                            type="sliced" width="190" height="30"/>
+                    <textfield name="txtSearch" pos="4,-2" width="182" height="26"
+                               font_size="20" character_limit="20"
+                               close_group_on_tab="true" clear_button="true"/>
+                </panel>
+
+                <simplebutton name="btnSortName" pos="240,-5" width="100" height="30"
+                              caption="Name" font_size="16"
+                              defaultcolor="60,60,80" hovercolor="120,120,200"/>
+
+                <simplebutton name="btnSortDist" pos="348,-5" width="100" height="30"
+                              caption="Dist" font_size="16"
+                              defaultcolor="60,60,80" hovercolor="120,120,200"/>
+            </rect>
+
+            <rect name="sortinfo" pos="8,-94" height="20" depth="5">
+                <label depth="6" width="160" height="20"
+                       text="{padcount}" font_size="16"
+                       effect="outline" justify="left" color="140,140,140"/>
+                <label depth="6" pos="160,0" width="140" height="20"
+                       text="{pageinfo}" font_size="16"
+                       effect="outline" justify="center" color="180,180,180"/>
+                <label depth="6" pos="300,0" width="140" height="20"
+                       text="{sortlabel}" font_size="16"
+                       effect="outline" justify="right" color="140,140,140"/>
+            </rect>
+
+            <rect name="content" pos="0,-116" height="344" depth="3">
+                <sprite depth="3" name="bgMain" sprite="menu_empty3px"
+                        color="32,32,32,240" type="sliced" width="460" height="344"/>
+
+                <grid name="padList" rows="8" cols="1" pos="6,-6"
+                      width="448" height="332" cell_width="448" cell_height="41"
+                      repeat_content="true" arrangement="vertical">
+                    <teleport_pad_entry name="0"/>
+                </grid>
+            </rect>
+
+            <rect name="footer" pos="0,-462" height="66" depth="5">
+                <sprite depth="3" name="bgFooter" sprite="menu_empty3px"
+                        color="48,48,48,240" type="sliced" width="460" height="66"/>
+
+                <simplebutton name="btnPrev" pos="8,-7" width="80" height="32"
+                              caption="PREV" font_size="18"
+                              defaultcolor="80,80,80" hovercolor="255,255,255"
+                              visible="{hasprev}"/>
+
+                <simplebutton name="btnNext" pos="372,-7" width="80" height="32"
+                              caption="NEXT" font_size="18"
+                              defaultcolor="80,80,80" hovercolor="255,255,255"
+                              visible="{hasnext}"/>
+
+                <simplebutton name="btnClose" pos="170,-36" width="120" height="28"
+                              caption_key="xuiClose" font_size="20"
+                              defaultcolor="100,40,40" hovercolor="255,100,100"
+                              sound="@:Sounds/UI/ui_menu_click.wav"/>
+            </rect>
+        </window>
+
+        <window name="windowTeleportPadNaming" width="360" height="200"
+                controller="TeleportPadNaming, TeleportPads"
+                anchor="CenterCenter" panel="Center" cursor_area="true">
+
+            <panel name="header" pos="0,0" height="44" depth="5"
+                   backgroundspritename="ui_game_panel_header">
+                <sprite depth="6" name="windowIcon" width="32" height="32"
+                        pos="6,-6" sprite="ui_game_symbol_pen"/>
+                <label depth="6" pos="42,-6" width="310" height="32"
+                       text="NAME PAD" text_key="teleportpad_name_title"
+                       font_size="28" effect="outline" style="header.name"/>
+            </panel>
+
+            <rect name="inputArea" pos="0,-48" height="70" depth="3">
+                <sprite depth="3" name="bgInput" sprite="menu_empty3px"
+                        color="32,32,32,240" type="sliced" width="360" height="70"/>
+
+                <label depth="5" pos="10,-8" width="340" height="22"
+                       text="Enter a name for this pad:" text_key="teleportpad_enter_name"
+                       font_size="18" effect="outline" color="180,180,180"/>
+
+                <panel pos="8,-32" depth="4" width="344" height="34"
+                       disableautobackground="true">
+                    <sprite depth="3" sprite="menu_empty3px" color="64,64,64"
+                            type="sliced" width="344" height="34"/>
+                    <textfield name="txtPadName" pos="4,-2" width="336" height="30"
+                               font_size="24" character_limit="24"
+                               focus_on_open="true" close_group_on_tab="true"
+                               virtual_keyboard_prompt="vkPromptTeleportPadName"/>
+                </panel>
+            </rect>
+
+            <rect name="buttons" pos="0,-124" height="40" depth="5">
+                <sprite depth="3" name="bgButtons" sprite="menu_empty3px"
+                        color="48,48,48,240" type="sliced" width="360" height="40"/>
+
+                <simplebutton name="btnSave" pos="60,-4" width="110" height="32"
+                              caption_key="teleportpad_save" font_size="20"
+                              defaultcolor="40,100,40" hovercolor="100,255,100"
+                              sound="@:Sounds/UI/ui_menu_click.wav"/>
+
+                <simplebutton name="btnCancel" pos="190,-4" width="110" height="32"
+                              caption_key="xuiCancel" font_size="20"
+                              defaultcolor="100,40,40" hovercolor="255,100,100"
+                              sound="@:Sounds/UI/ui_menu_click.wav"/>
+            </rect>
+        </window>
+
+    </append>
+</configs>

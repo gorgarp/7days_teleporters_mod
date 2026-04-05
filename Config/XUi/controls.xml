@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+    <append xpath="/controls">
+        <teleport_pad_entry>
+            <rect depth="1" width="448" height="40"
+                  controller="TeleportPadEntry, TeleportPads"
+                  on_press="true">
+
+                <sprite depth="2" name="rowBg" sprite="menu_empty3px"
+                        color="52,52,52,200" type="sliced" width="448" height="38"
+                        pos="0,-1"/>
+
+                <sprite depth="3" name="rowHover" sprite="menu_empty"
+                        color="0,0,0,0" type="sliced" width="448" height="38"
+                        pos="0,-1" hovercolor="80,180,255,60"/>
+
+                <label depth="4" name="lblName" pos="8,-4" width="200" height="30"
+                       text="{padname}" font_size="22" effect="outline"
+                       justify="left" color="255,255,255"/>
+
+                <label depth="4" name="lblDistance" pos="212,-4" width="80" height="30"
+                       text="{distance}" font_size="18" effect="outline"
+                       justify="center" color="180,220,180"/>
+
+                <label depth="4" name="lblCoords" pos="292,-8" width="100" height="24"
+                       text="{coords}" font_size="14" effect="outline"
+                       justify="center" color="140,140,140"/>
+
+                <simplebutton name="btnGo" pos="396,-3" width="48" height="32"
+                              caption="GO" font_size="20"
+                              defaultcolor="40,80,120" hovercolor="80,180,255"
+                              sound="@:Sounds/UI/ui_menu_click.wav"/>
+            </rect>
+        </teleport_pad_entry>
+    </append>
+</configs>
